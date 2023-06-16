@@ -55,16 +55,20 @@ export function EditDish() {
 
   async function handleSaveDish() {
     const formData = new FormData();
-  
+    const formattedIngredient = [];
     formData.append("name", name || data.name);
     formData.append("category_name", category || data.category_name);
     formData.append("price", price || data.price);
-    formData.append("ingredients", ingredients.length > 0 ? ingredients : data.ingredients);
+    data.ingredients.forEach((ingredient)=> {
+      formattedIngredient.push(ingredient.name);
+      })
     formData.append("description", description || data.description);
+    formData.append("ingredients", formattedIngredient)
   
     if (image) {
       formData.append("avatar_dish", image);
     }
+    console.log(data.ingredients);
   
     try {
       setIsLoading(true);
@@ -91,7 +95,7 @@ export function EditDish() {
     }
     fetchDishes();
   }, []);
-
+  console.log(data);
   return (
     <Container>
       <HeaderAdmin />
@@ -151,10 +155,10 @@ export function EditDish() {
                   <label htmlFor="ingredients">Ingredientes</label>
                   {data.ingredients && (
                     <div className="ingredients" id="ingredients">
-                      {ingredients.map((ingredient, index) => (
+                      {data.ingredients.map((ingredient, index) => (
                         <DishItem
                           key={index}
-                          value={ingredient}
+                          value={ingredient.name}
                           onClick={() => handleRemoveIngredient(ingredient)}
                         />
                       ))}

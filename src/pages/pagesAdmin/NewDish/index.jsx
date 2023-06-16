@@ -63,6 +63,7 @@ export function NewDish() {
     formData.append("description", description);
     formData.append("avatar_dish", image);
 
+    console.log(ingredients);
     try {
       setIsLoading(true);
       await api.post("/dishes", formData);

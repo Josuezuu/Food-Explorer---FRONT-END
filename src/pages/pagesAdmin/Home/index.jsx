@@ -115,7 +115,6 @@ export function Home() {
 
     fetchFavorites();
   }, []);
-
   return (
     <Container>
       <HeaderAdmin onChange={(e) => setSearch(e.target.value)} />
@@ -130,10 +129,10 @@ export function Home() {
 
           <Section title="Refeições">
             <div ref={scrollMealList}>
-              {dishes.filter((dish) => dish.category_id === 1).length === 0 ? (
+              {dishes.filter((dish) => dish.category_id === 6).length == 0 ? (
                 <p>Você ainda não adicionou nenhuma refeição.</p>
               ) : (
-                dishes.filter((dish) => dish.category_id === 1).map((dish) => (
+                dishes.filter((dish) => dish.category_id === 6).map((dish) => (
                   <DishAdmin
                     key={String(dish.id)}
                     data={dish}
@@ -155,10 +154,10 @@ export function Home() {
 
           <Section title="Sobremesas">
             <div ref={scrollDessertList}>
-              {dishes.filter((dish) => dish.category_id === 3).length === 0 ? (
+              {dishes.filter((dish) => dish.category_id === 5).length === 0 ? (
                 <p>Você ainda não adicionou nenhuma sobremesa.</p>
               ) : (
-                dishes.filter((dish) => dish.category_id === 3).map((dish) => (
+                dishes.filter((dish) => dish.category_id === 5).map((dish) => (
                   <DishAdmin
                     key={String(dish.id)}
                     data={dish}
@@ -180,10 +179,10 @@ export function Home() {
 
           <Section title="Bebidas">
             <div ref={scrollDrinkList}>
-              {dishes.filter((dish) => dish.category_id === 2).length === 0 ? (
+              {dishes.filter((dish) => dish.category_id === 4).length === 0 ? (
                 <p>Você ainda não adicionou nenhuma bebida.</p>
               ) : (
-                dishes.filter((dish) => dish.category_id === 2).map((dish) => (
+                dishes.filter((dish) => dish.category_id === 4).map((dish) => (
                   <DishAdmin
                     key={String(dish.id)}
                     data={dish}

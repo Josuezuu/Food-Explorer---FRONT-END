@@ -133,11 +133,11 @@ export function Home() {
           <>
             <Section title="Refeições">
               <div ref={scrollMealList}>
-                {dishes.filter((dish) => dish.category_id === 1).length === 0 ? (
+                {dishes.filter((dish) => dish.category_id === 6).length === 0 ? (
                   <p>Nenhuma refeição disponível.</p>
                 ) : (
                   dishes
-                    .filter((dish) => dish.category_id === 1)
+                    .filter((dish) => dish.category_id === 6)
                     .map((dish) => (
                       <DishUsers
                         key={String(dish.id)}
@@ -160,11 +160,11 @@ export function Home() {
 
             <Section title="Sobremesas">
               <div ref={scrollDessertList}>
-                {dishes.filter((dish) => dish.category_id === 3).length === 0 ? (
+                {dishes.filter((dish) => dish.category_id === 5).length === 0 ? (
                   <p>Nenhuma sobremesa disponível.</p>
                 ) : (
                   dishes
-                    .filter((dish) => dish.category_id === 3)
+                    .filter((dish) => dish.category_id === 5)
                     .map((dish) => (
                       <DishUsers
                         key={String(dish.id)}
@@ -187,11 +187,11 @@ export function Home() {
 
             <Section title="Bebidas">
               <div ref={scrollDrinkList}>
-                {dishes.filter((dish) => dish.category_id === 2).length === 0 ? (
+                {dishes.filter((dish) => dish.category_id === 4).length === 0 ? (
                   <p>Nenhuma bebida disponível.</p>
                 ) : (
                   dishes
-                    .filter((dish) => dish.category_id === 2)
+                    .filter((dish) => dish.category_id === 4)
                     .map((dish) => (
                       <DishUsers
                         key={String(dish.id)}
