@@ -54,6 +54,9 @@ export function EditDish() {
   }
 
   async function handleSaveDish() {
+    if (!image) {
+      setImage(data.avatar_dish);
+    }
     const formData = new FormData();
     const formattedIngredient = [];
     formData.append("name", name || data.name);
