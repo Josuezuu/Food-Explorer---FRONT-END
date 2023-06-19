@@ -38,17 +38,17 @@ Por fim, o usuário admin consegue visualizar os pedidos gerados pelos clientes 
 
 # INSTALAÇÃO:
 
-# Clone this repository
-$ git clone 
+- Clone este repositório:
+    $ git clone 
 
-# Access the project folder in your terminal
-$ cd food-explorer-frontend
+- Acesse a pasta do projeto no seu terminal
+    $ cd food-explorer-frontend
 
-# Install the dependencies
-$ npm install
+- Instale todas as dependências
+    $ npm install
 
-# Run the application in development mode
-$ npm run dev
+- Execute a aplicação em modo desenvolvimento:
+    $ npm run dev
 
 
 
