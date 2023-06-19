@@ -39,7 +39,7 @@ Por fim, o usuário admin consegue visualizar os pedidos gerados pelos clientes 
 # INSTALAÇÃO:
 
 - Clone este repositório:
-    $ git clone 
+    $ git clone https://github.com/Josuezuu/Food-Explorer---FRONT-END.git
 
 - Acesse a pasta do projeto no seu terminal
     $ cd food-explorer-frontend
